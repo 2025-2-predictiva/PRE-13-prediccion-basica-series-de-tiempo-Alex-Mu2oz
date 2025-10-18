@@ -12,7 +12,6 @@ from statsmodels.graphics.tsaplots import plot_acf, plot_pacf  #  type: ignore
 def load_data():
     df = pd.read_csv("../files/input/sutter.csv")
     df = df.set_index("date")
-
     return df
 
 
@@ -61,6 +60,7 @@ def acf_pacf_plots(z):
         plt.yticks(fontsize=8)
         plt.xticks(fontsize=8)
         plt.title(plt.gca().get_title(), fontsize=8)
+
     plt.figure(figsize=(9, 3))
 
     plt.subplot(1, 2, 1)
